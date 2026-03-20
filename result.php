@@ -27,4 +27,40 @@ echo "Try Again!";
 }
 
 ?>
-<h2><a href="index.php"> Back To Home</a></h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result | QuizMaster</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Quiz Result</h1>
+</header>
+
+<main style="text-align:center; padding:40px;">
+
+  <h2>Your Score: <?php echo $score; ?> / 3</h2>
+
+  <?php
+  if ($score == 3) {
+      echo "<p>Excellent! </p>";
+  } elseif ($score == 2) {
+      echo "<p>Good Job </p>";
+  } else {
+      echo "<p>Try Again </p>";
+  }
+  ?>
+
+  <br><br>
+
+  <a href="index.php">Back To Home</a>
+
+</main>
+
+</body>
+</html>
